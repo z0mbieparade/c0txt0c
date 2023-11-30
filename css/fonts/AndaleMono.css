@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Andale Mono', monospace;
+    src: url('AndaleMono.eot');
+    src: local('Andale Mono'), local('AndaleMono'),
+        url('AndaleMono.eot?#iefix') format('embedded-opentype'),
+        url('AndaleMono.woff2') format('woff2'),
+        url('AndaleMono.woff') format('woff'),
+        url('AndaleMono.ttf') format('truetype'),
+        url('AndaleMono.svg#AndaleMono') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}

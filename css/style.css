@@ -1,0 +1,139 @@
+html, body {
+  font-family: "Menlo Regular", monospace !important;
+  font-size: 14px;
+  line-height: 14px;
+  outline: 0;
+  font-weight: normal;
+}
+
+#grid {
+  position: relative;
+}
+#grid #overlay, #grid #layers > .layer {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  white-space: pre;
+  font-size: 14.5px;
+  line-height: 14px;
+  margin: 10px;
+}
+#grid #overlay .grid_row, #grid #layers > .layer .grid_row {
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  white-space: pre;
+  font-size: 14.5px;
+  line-height: 14px;
+}
+#grid #overlay .grid_row .grid_cell, #grid #layers > .layer .grid_row .grid_cell {
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 0;
+  width: fit-content;
+  white-space: pre;
+  font-size: 14.5px;
+  line-height: 14px;
+  user-select: none;
+}
+#grid #layers > .layer {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#grid #overlay {
+  position: relative;
+  z-index: 1000000;
+  outline: 1px solid rgba(125, 125, 125, 0.5);
+}
+#grid #overlay .grid_row.selected {
+  z-index: 1;
+}
+#grid #overlay .grid_row .grid_cell {
+  outline: 1px solid rgba(125, 125, 125, 0.1);
+}
+#grid #overlay .grid_row .grid_cell.selected {
+  outline: 1px solid rgba(0, 125, 0, 0.5);
+  z-index: 1;
+}
+#grid #overlay .grid_row .grid_cell.selected.highlighted {
+  outline: 2px solid rgba(0, 125, 125, 0.5);
+}
+#grid #overlay .grid_row .grid_cell.grid_num_horz:before {
+  content: attr(col);
+  position: absolute;
+  top: -10px;
+  font-size: 8px;
+  line-height: 8px;
+}
+#grid #overlay .grid_row .grid_cell.grid_num_vert:before {
+  content: attr(row);
+  position: absolute;
+  left: calc(-100% - 2px);
+  font-size: 8px;
+  text-align: right;
+  width: 100%;
+}
+#grid #overlay .grid_row .grid_cell:hover:not(.selected):not(.highlighted) {
+  outline: 1px solid rgba(0, 108, 125, 0.3);
+}
+#grid #overlay .grid_row .grid_cell:hover:after {
+  content: attr(hov);
+  position: absolute;
+  top: -18px;
+  left: -100%;
+  background-color: #FFF;
+  outline: 1px solid rgba(125, 125, 125, 0.3);
+  padding: 2px;
+  font-size: 10px;
+  line-height: 10px;
+  opacity: 0.7;
+}
+
+.tool_panel {
+  outline: 1px solid rgba(125, 125, 125, 0.5);
+  width: 150px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.tool_panel .title {
+  flex: 0 0 auto;
+  font-weight: bold;
+  padding: 4px;
+  display: block;
+}
+
+#layers_panel #layers_list {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#layers_panel #layers_list li {
+  flex: 0 0 auto;
+  padding: 4px;
+  outline: 1px solid rgba(125, 125, 125, 0.5);
+  background-color: rgba(125, 125, 125, 0.1);
+}
+#layers_panel #layers_list li.selected {
+  background-color: rgba(0, 125, 0, 0.2);
+}
+#layers_panel #layer_actions {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+#layers_panel #layer_actions > div {
+  flex: 0 0 auto;
+  cursor: pointer;
+  padding: 4px;
+  outline: 1px solid rgba(125, 125, 125, 0.5);
+  width: fit-content;
+}/*# sourceMappingURL=style.css.map */

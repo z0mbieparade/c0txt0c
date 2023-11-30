@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Cogmind Smallcaps';
+    src: url('Cogmind-Smallcaps.eot');
+    src: local('Cogmind Smallcaps'), local('Cogmind-Smallcaps'),
+        url('Cogmind-Smallcaps.eot?#iefix') format('embedded-opentype'),
+        url('Cogmind-Smallcaps.woff2') format('woff2'),
+        url('Cogmind-Smallcaps.woff') format('woff'),
+        url('Cogmind-Smallcaps.ttf') format('truetype'),
+        url('Cogmind-Smallcaps.svg#Cogmind-Smallcaps') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
